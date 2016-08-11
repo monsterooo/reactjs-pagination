@@ -19,6 +19,7 @@ class Pagination extends Component {
 	static defaultProps = {
 		currentPage: 1,
 		pagesPage: true,
+		middlePage: 5,
 
 		showGo: false,
 		showPages: true,
@@ -123,7 +124,7 @@ class Pagination extends Component {
 		if(inputPage > pageCount) {
 			return;
 		}
-		if(idx === this.state.currentPage) {
+		if(inputPage === this.state.currentPage) {
 			return;
 		}
 		this.jumpPage(inputPage);
